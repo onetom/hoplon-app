@@ -4,20 +4,20 @@
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
-  :dependencies [[org.clojure/clojure "1.8.0"]
+  :dependencies [[org.clojure/clojure "1.9.0-alpha15"]
                  [ring-server "0.4.0"]
-                 [hoplon "6.0.0-alpha15"]
-                 [ring "1.4.0"]
-                 [ring/ring-defaults "0.2.0"]
-                 [compojure "1.5.0"]
+                 [hoplon "6.0.0-alpha17"]
+                 [ring "1.5.1"]
+                 [ring/ring-defaults "0.2.3"]
+                 [compojure "1.5.2"]
                  [hiccup "1.0.5"]
                  [yogthos/config "0.8"]
-                 [org.clojure/clojurescript "1.9.36"
+                 [org.clojure/clojurescript "1.9.521"
                   :scope "provided"]]
 
-  :plugins [[lein-environ "1.0.2"]
-            [lein-cljsbuild "1.1.1"]
-            [lein-asset-minifier "0.2.7"
+  :plugins [[lein-environ "1.1.0"]
+            [lein-cljsbuild "1.1.5"]
+            [lein-asset-minifier "0.3.2"
              :exclusions [org.clojure/clojure]]]
 
   :ring {:handler hoplon-app.handler/app
@@ -75,15 +75,15 @@
   :profiles {:dev {:repl-options {:init-ns hoplon-app.repl}
 
                    :dependencies [[ring/ring-mock "0.3.0"]
-                                  [ring/ring-devel "1.4.0"]
-                                  [prone "1.1.1"]
-                                  [figwheel-sidecar "0.5.3-2"]
-                                  [org.clojure/tools.nrepl "0.2.12"]
+                                  [ring/ring-devel "1.5.1"]
+                                  [prone "1.1.4"]
+                                  [figwheel-sidecar "0.5.10"]
+                                  [org.clojure/tools.nrepl "0.2.13"]
                                   [com.cemerick/piggieback "0.2.2-SNAPSHOT"]
-                                  [pjstadig/humane-test-output "0.8.0"]]
+                                  [pjstadig/humane-test-output "0.8.1"]]
 
                    :source-paths ["env/dev/clj"]
-                   :plugins [[lein-figwheel "0.5.3-2"]]
+                   :plugins [[lein-figwheel "0.5.10"]]
                    :injections [(require 'pjstadig.humane-test-output)
                                 (pjstadig.humane-test-output/activate!)]
 

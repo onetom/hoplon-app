@@ -1,11 +1,8 @@
 (ns hoplon-app.core
   (:require
-    [hoplon.core
-     :as h
-     :include-macros true]
-    [javelin.core
-     :refer [cell]
-     :refer-macros [cell= dosync]]))
+    [javelin.core :refer [cell] :refer-macros [cell= dosync]]
+    [hoplon.core :as h :include-macros true]
+    [hoplon.jquery]))
 
 (def todo-items (cell ["foo" "bar"]))
 
