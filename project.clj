@@ -7,6 +7,7 @@
   :dependencies [[org.clojure/clojure "1.9.0-alpha15"]
                  [ring-server "0.4.0"]
                  [hoplon "6.0.0-alpha17"]
+                 [hoplon/ui "0.2.1-SNAPSHOT"]
                  [ring "1.5.1"]
                  [ring/ring-defaults "0.2.3"]
                  [compojure "1.5.2"]

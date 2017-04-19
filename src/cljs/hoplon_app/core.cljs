@@ -2,7 +2,8 @@
   (:require
     [javelin.core :refer [cell] :refer-macros [cell= dosync]]
     [hoplon.core :as h :include-macros true]
-    [hoplon.jquery]))
+    [hoplon.jquery]
+    [hoplon.ui :refer [elem]]))
 
 (def todo-items (cell ["foo" "bar"]))
 
@@ -45,6 +46,7 @@
 (h/defelem home []
   (h/div
     :id "app"
+    (elem "Welcome to Hoplon UI")
     (h/h3 "Welcome to Hoplon")
     (todo-list {:title "TODO List"})
     (add-todo)))
